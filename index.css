@@ -1,3 +1,11 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
 #header {
     width: 100%;
     height: 200px;
@@ -7,4 +15,12 @@
     height: 96%;
     display: block;
     margin: 2% auto 2% auto;
+}
+
+#page-content {
+    flex: 1 0 auto;
+}
+
+#sticky-footer {
+    flex-shrink: 0;
 }
