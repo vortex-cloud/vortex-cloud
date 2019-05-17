@@ -1,28 +1,10 @@
-html {
-    overflow-y: hidden;
-    padding: 0;
-    margin: 0;
+#header {
     width: 100%;
-    height: 100%;
+    height: 200px;
 }
 
-body {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background: url("./images/cloud.jpg") center center;
-}
-
-#welcome {
-    margin: 30vh auto 10px auto;
-    border-top: #9fcdff 2px solid;
-    border-bottom: #9fcdff 2px solid;
-    background-color: rgba(50, 50, 50, 0.4);
-    background-size: contain;
-    color: white;
-    width: 60%;
-    text-align: center;
-    min-width: 700px;
+#header_icon {
+    height: 96%;
+    display: block;
+    margin: 2% auto 2% auto;
 }
