@@ -32,3 +32,15 @@ body {
 .card {
     display: inline-block;
 }
+
+.collapse {
+    flex-grow: 0;
+}
+
+button:focus {
+    outline: 0;
+}
+
+a:focus {
+    outline: 0;
+}
