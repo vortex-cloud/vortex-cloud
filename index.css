@@ -28,3 +28,7 @@ body {
 #sticky-footer {
     flex-shrink: 0;
 }
+
+.card {
+    display: inline-block;
+}
