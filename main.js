@@ -11,9 +11,9 @@ $(document).ready(function () {
             signedIn = false;
         } else {
             var username = encodeURI($("#in-game-name").val());
-            $.getJSON("https://api.mojang.com/users/profiles/minecraft/" + username, function (result) {
+            $.get("https://api.minetools.eu/uuid/" + username).done(function (result) {
                 console.log(result);
-                $("#face").attr("src", "https://minotar.net/cube/" + username + "/100.png");
+                $("#face").attr("src", "https://minotar.net/helm/" + username + "/38.png");
                 $("#name").html(result.name);
                 $(".signInContent").show();
                 $(".signOutContent").hide();
