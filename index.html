@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Vortex Cloud</title>
+    <script src="./jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="./index.css">
     <link rel="icon" href="./images/favicon.png">
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="main.js"></script>
     <script src="load.js"></script>
 </head>
 <body class="d-flex flex-column">
@@ -46,6 +48,18 @@
             <li class="nav-item">
                 <a class="nav-link disabled" href="./bans"><i class="fa fa-gavel" aria-hidden="true"></i>&nbsp; Bans</a>
             </li>
+            <form class="form-inline ml-2" id="login-form">
+                <div class="input-group mb-3">
+                    <img class="signInContent" id="face" src="" alt="">
+                    <div class="signInContent input-group-prepend">
+                        <span id="name" class="input-group-text"></span>
+                    </div>
+                    <input id="in-game-name" class="signOutContent form-control" type="text" placeholder="In-Game Name">
+                    <div class="input-group-append">
+                        <button id="sign-in-btn" class="btn btn-success" type="submit"><i class="fas fa-sign-in-alt"></i></button>
+                    </div>
+                </div>
+            </form>
         </ul>
     </div>
     <span class="navbar-text ml-auto">
@@ -65,7 +79,8 @@
                     <h6 class="card-subtitle mb-2 text-muted">Vortex Cloud is now public!</h6>
                     <p class="card-text">Today, on Sat 18 May, Vortex Cloud officially opened! Please note that the
                         server's
-                        developing team are amateurs, hence there may be tons of bugs, please report any glitches/bugs/grammar
+                        developing team are amateurs, hence there may be tons of bugs, please report any
+                        glitches/bugs/grammar
                         errors to
                         <a href="mailto:bug-report@vortexcloud.tk">bug-report@vortexcloud.tk</a>.</p>
                     <p class="card-text">We wish you good luck, and have a enjoyable day on our minecraft server:
@@ -99,7 +114,6 @@
     <span class="navbar-text" style="text-align: center; width:100%;">Vortex Team • Minecraft is a copyright of Mojang AB. All rights reserved.</span>
 </nav>
 <!-- Scripts -->
-<script src="./jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
