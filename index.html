@@ -11,16 +11,19 @@
           integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="./index.css">
     <link rel="icon" href="./images/favicon.png">
-    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>
     <script src="main.js"></script>
-    <script src="load.js"></script>
+    <script src="connect.js"></script>
 </head>
 <body class="d-flex flex-column">
 <div id="header">
     <img id="header_icon" src="./images/hdicon.png"/>
 </div>
 
-<nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
+<nav class="navbar navbar-expand-lg bg-light navbar-light sticky-top" id="navbar">
     <a class="navbar-brand ml-auto" href="https://vortexcloud.tk">
         <img src="./images/hdicon.png" alt="Logo" style="width:40px;"> Vortex Cloud
     </a>
@@ -48,26 +51,23 @@
             <li class="nav-item">
                 <a class="nav-link disabled" href="./bans"><i class="fa fa-gavel" aria-hidden="true"></i>&nbsp; Bans</a>
             </li>
-            <form class="form-inline ml-2" id="login-form">
-                <div class="input-group mb-3">
+            <form class="form-inline ml-1" id="login-form">
+                <div class="input-group">
                     <img class="signInContent" id="face" src="" alt="">
                     <div class="signInContent input-group-prepend">
                         <span id="name" class="input-group-text"></span>
                     </div>
                     <input id="in-game-name" class="signOutContent form-control" type="text" placeholder="In-Game Name">
                     <div class="input-group-append">
-                        <button id="sign-in-btn" class="btn btn-success" type="submit"><i class="fas fa-sign-in-alt"></i></button>
+                        <button id="sign-in-btn" class="btn btn-success" type="submit"><i
+                                class="fas fa-sign-in-alt"></i></button>
                     </div>
                 </div>
             </form>
         </ul>
     </div>
-    <span class="navbar-text ml-auto">
-        <b id="server-online"></b> <b>play.vortexcloud.tk</b>
-        <span class="d-none d-md-block">
-            <span id="player-count"></span> online.
-            <small id="server-version"></small>
-        </span>
+    <span class="navbar-text ml-auto clearfix" id="server-stats">
+        <b id="server-online"></b> <b>play.vortexcloud.tk</b> <span id="player-count"></span>
     </span>
 </nav>
 <div id="page-content">
@@ -110,6 +110,20 @@
     </div>
 </div>
 </div>
+<ul id="chat-messages">
+</ul>
+<div id="chat-form" class="input-group">
+    <div class="input-group-prepend">
+        <button id="chat-open-btn" class="btn btn-outline-secondary" type="button"><i class="fas fa-caret-up"></i>
+        </button>
+    </div>
+    <input id="chat-input" type="text" class="form-control" placeholder="Message" aria-label="Message"
+           aria-describedby="basic-addon2">
+    <div class="input-group-append">
+        <button id="chat-send-btn" class="btn btn-outline-secondary" type="button"><i
+                class="far fa-paper-plane"></i></button>
+    </div>
+</div>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
     <span class="navbar-text" style="text-align: center; width:100%;">Vortex Team • Minecraft is a copyright of Mojang AB. All rights reserved.</span>
 </nav>
@@ -121,13 +135,5 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 <script src="https://mcapi.us/scripts/minecraft.js"></script>
-<script>
-    MinecraftAPI.getServerStatus('play.vortexcloud.tk', function (err, status) {
-        if (err) return $("#server-online").html('?');
-        $("#server-online").html(status.online ? '<i class="fa fa-check"></i>' : '<i class="fas fa-times"></i>');
-        $("#player-count").html(status.players.now + "/" + status.players.max);
-        $("#server-version").html(status.server.name);
-    });
-</script>
 </body>
 </html>

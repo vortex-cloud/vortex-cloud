@@ -38,10 +38,41 @@ body {
     flex-grow: 0;
 }
 
-button:focus {
-    outline: 0;
+#chat-form {
+    position: fixed;
+    bottom: 70px;
+    right: 0;
+    width: 300px;
+    height: 38px;
 }
 
-a:focus {
-    outline: 0;
+#chat-messages {
+    position: fixed;
+    bottom: 107px;
+    right: 0;
+    width: 300px;
+    height: 200px;
+    list-style-type: none;
+    vertical-align: bottom;
+    padding-inline-start: .5em;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    border: 1px solid #6c757d;
+    margin-bottom: 0;
+    display: none;
+    background-color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.message-node {
+    word-wrap: break-word;
+}
+
+#chat-open-btn {
+    border-top-left-radius: 0;
+}
+
+#chat-send-btn {
+    border-top-right-radius: 0;
 }
