@@ -26,6 +26,8 @@ $(document).ready(function () {
                     localStorage.setItem("icon", "https://minotar.net/helm/" + username + "/38.png");
                     firebase.auth().signInAnonymously().catch(function (error) {
                     });
+                } else {
+                    alert("Please use a correct minecraft premium account name!");
                 }
             });
         }
