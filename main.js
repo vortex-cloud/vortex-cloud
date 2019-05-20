@@ -79,6 +79,7 @@ function firebaseReady() {
         database = firebase.database();
         messages_ref = firebase.database().ref("messages_data");
         console.log("Setting Up Message Hook");
+        $("#chat-messages").html("");
         messages_ref.on('child_added', function (data) {
             console.log("New Message Received");
             var key = data.key;
