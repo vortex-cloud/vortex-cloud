@@ -20,11 +20,13 @@ $(document).ready(function () {
             var username = encodeURI($("#in-game-name").val());
             $.get("https://api.minetools.eu/uuid/" + username).done(function (result) {
                 console.log(result);
-                localStorage.setItem("name", username);
-                localStorage.setItem("uuid", result.id);
-                localStorage.setItem("icon", "https://minotar.net/helm/" + username + "/38.png");
-                firebase.auth().signInAnonymously().catch(function (error) {
-                });
+                if (result.id !== "null") {
+                    localStorage.setItem("name", username);
+                    localStorage.setItem("uuid", result.id);
+                    localStorage.setItem("icon", "https://minotar.net/helm/" + username + "/38.png");
+                    firebase.auth().signInAnonymously().catch(function (error) {
+                    });
+                }
             });
         }
     });
