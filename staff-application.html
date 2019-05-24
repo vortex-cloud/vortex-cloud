@@ -58,9 +58,9 @@
 </nav>
 <div id="page-content">
     <div class="container">
-        <h2>VortexCloud Staff Application</h2>
-        <h4>Please answer all of the following questions.</h4>
         <form id="staff-form">
+            <h2>VortexCloud Staff Application</h2>
+            <h4>Please answer all of the following questions.</h4>
             <div class="form-group">
                 <label for="real-name">Real Name:</label>
                 <input type="text" class="form-control" id="real-name" aria-describedby="nameHelp"
@@ -363,15 +363,15 @@
             <button type="submit" class="btn btn-primary mt-3">Generate Report</button>
         </form>
         <div id="report" style="display:none;">
+            <h3>Generated Application:</h3>
             <pre id="final-report"></pre>
-            <a href="#" id="amend">Not Correct?</a>
-            <p>Send the application to discord user <strong><a target="_blank"
-                                                               href="https://discordapp.com/channels/@me/573123101781524522">JustDqg#2685</a></strong>.
-            </p>
-            <p><strong>JustDqg</strong> is the one that deals with
-                those things, if you are going to send
-                it to other owner it will be automatically denied.</p>
-            <p>Thank you for your application, you will receive an answer within <strong>4</strong> Days.</p>
+            <small>Your information is not sent to any server/database, this message is 100% client side generated. And
+                we have no storage of your inputted details until you decide to send it to discord.
+            </small>
+            <p>Your application is now being delivered to our staff team to be reviewed, you will receive an answer
+                within
+                <strong>4</strong> days.</p>
+            <div id="status"></div>
         </div>
     </div>
 </div>
@@ -390,10 +390,16 @@
     $("#staff-form").submit(function (e) {
         e.preventDefault();
         let report = "**Real Name:** " + $("#real-name").val() + "\n**Age:** " + $("#age").val() + "\n**DC Username:** " + $("#dc-username").val() + "\n**MC Username:** " + $("#mc-username").val() + "\n**Time Zone:** " + $("#time-zone option:selected").html() + "\n**Reason for apply:** " + $("#reason-apply").val() + "\n**Why this server:** " + $("#reason-server").val() + "\n**Action when facing Offender:** " + $("#action-offense").val() + "\n**Daily Activities:** " + $("#action-everyday").val() + "\n**Extra:** " + $("#addon").val() + "\n**Staff Experience:** " + $("#staff-exp").val() + "\n**Recording Ability:** " + $("#record-exp").val();
+        $("#status").html("<div class=\"spinner-border text-success\"></div>");
+        $.post("https://discordapp.com/api/webhooks/581511301725945856/9_7L9oguVQdN7x0csd5MCNPIbKprOMDKKqZZ--4wtSJsl7c8HRVsJpDSv3JyP2ne8Hu5",
+            {"content": report}
+            ).done(function () {
+            $("#status").html("Done!");
+        });
         $("#final-report").html(report);
         $("#staff-form").slideUp();
         $("#report").slideDown();
-    })
+    });
     $("#amend").click(function () {
         $("#staff-form").slideDown();
         $("#report").slideUp();
