@@ -20,7 +20,7 @@
 </head>
 <body class="d-flex flex-column">
 <div id="header">
-    <img id="header_icon" src="./images/hdicon.png"/>
+    <img id="header_icon" src="./images/hdicon.png" alt="VC"/>
 </div>
 
 <nav class="navbar navbar-expand-lg bg-light navbar-light sticky-top" id="navbar">
@@ -49,21 +49,12 @@
                                                                                  aria-hidden="true"></i>&nbsp; Map</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="./bans"><i class="fa fa-gavel" aria-hidden="true"></i>&nbsp; Bans</a>
+                <a class="nav-link" href="staff-application.html"><i class="fas fa-users"></i>&nbsp; Staff
+                    Application</a>
             </li>
-            <form class="form-inline ml-1" id="login-form">
-                <div class="input-group">
-                    <img class="signInContent" id="face" src="" alt="">
-                    <div class="signInContent input-group-prepend">
-                        <span id="name" class="input-group-text"></span>
-                    </div>
-                    <input id="in-game-name" class="signOutContent form-control" type="text" placeholder="In-Game Name">
-                    <div class="input-group-append">
-                        <button id="sign-in-btn" class="btn btn-success" type="submit"><i
-                                class="fas fa-sign-in-alt"></i></button>
-                    </div>
-                </div>
-            </form>
+            <li class="nav-item">
+                <a class="nav-link disabled"><i class="fa fa-gavel" aria-hidden="true"></i>&nbsp; Bans</a>
+            </li>
         </ul>
     </div>
     <span class="navbar-text ml-auto clearfix" id="server-stats">
@@ -109,9 +100,19 @@
         </div>
     </div>
 </div>
-</div>
 <ul id="chat-messages" class="signInContent">
 </ul>
+<div id="login-form" class="input-group">
+    <img class="signInContent" id="face" src="" alt="">
+    <div class="signInContent input-group-prepend">
+        <span id="name" class="input-group-text"></span>
+    </div>
+    <input id="in-game-name" class="signOutContent form-control" type="text" placeholder="In-Game Name">
+    <div class="input-group-append">
+        <button id="sign-in-btn" class="btn btn-success" type="submit"><i
+                class="fas fa-sign-in-alt"></i></button>
+    </div>
+</div>
 <div id="chat-form" class="input-group signInContent">
     <div class="input-group-prepend">
         <button id="chat-open-btn" class="btn btn-outline-secondary" type="button"><i class="fas fa-caret-up"></i>

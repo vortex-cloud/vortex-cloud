@@ -5,8 +5,8 @@ var chatShown = false;
 $(document).ready(function () {
     $(".signInContent").hide();
     $(".signOutContent").show();
-    $("#login-form").submit(function (e) {
-        e.preventDefault();
+
+    function signInFunction() {
         if (signedIn) {
             $(".signInContent").hide();
             $(".signOutContent").show();
@@ -31,7 +31,14 @@ $(document).ready(function () {
                 }
             });
         }
+    }
+
+    $("#sign-in-btn").click(signInFunction);
+
+    $("#in-game-name").keypress(function (e) {
+        if (e.keyCode == 13) signInFunction();
     });
+
     $("#chat-open-btn").click(function (e) {
         if (chatShown) {
             $("#chat-open-btn").html("<i class=\"fas fa-caret-up\"></i>");
