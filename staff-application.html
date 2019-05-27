@@ -413,6 +413,7 @@
         </form>
         <div id="report" style="display:none;">
             <h3>Generated Application:</h3>
+            <pre id="final-report"></pre>
             <p>Your application is now being delivered to our staff team to be reviewed, you will receive an answer
                 within
                 <strong>4</strong> days.</p>
@@ -434,13 +435,13 @@
 <script>
     $("#staff-form").submit(function (e) {
         e.preventDefault();
-        let report = "**Real Name:** " + $("#real-name").val() + "\n**Age:** " + $("#age").val() + "\n**DC Username:** " + $("#dc-username").val() + "\n**MC Username:** " + $("#mc-username").val() + "\n**Time Zone:** " + $("#time-zone option:selected").html()+ "\n**Target Time Invested:** " + $("#time-online option:selected").html() + "\n**Reason for apply:** " + $("#reason-apply").val() + "\n**Why this server:** " + $("#reason-server").val() + "\n**Action when facing Offender:** " + $("#action-offense").val() + "\n**Daily Activities:** " + $("#action-everyday").val() + "\n**Extra:** " + $("#addon").val() + "\n**Staff Experience:** " + $("#staff-exp").val() + "\n**Recording Ability:** " + $("#record-exp").val();
+        let report = "**Real Name:** " + $("#real-name").val() + "\n**Age:** " + $("#age").val() + "\n**DC Username:** " + $("#dc-username").val() + "\n**MC Username:** " + $("#mc-username").val() + "\n**Time Zone:** " + $("#time-zone option:selected").html() + "\n**Target Time Invested:** " + $("#time-online option:selected").html() + "\n**Reason for apply:** " + $("#reason-apply").val() + "\n**Why this server:** " + $("#reason-server").val() + "\n**Action when facing Offender:** " + $("#action-offense").val() + "\n**Daily Activities:** " + $("#action-everyday").val() + "\n**Extra:** " + $("#addon").val() + "\n**Staff Experience:** " + $("#staff-exp").val() + "\n**Recording Ability:** " + $("#record-exp").val();
         $("#status").html("<div class=\"spinner-border text-success\"></div>");
         $.post("https://discordapp.com/api/webhooks/581511301725945856/9_7L9oguVQdN7x0csd5MCNPIbKprOMDKKqZZ--4wtSJsl7c8HRVsJpDSv3JyP2ne8Hu5",
             {"content": report}
         ).done(function () {
             $("#status").html("Done!");
-        }).fail(function() {
+        }).fail(function () {
             $("#status").html("Failed! Please try again later!");
         });
         $("#final-report").html(report);
