@@ -1,0 +1,20 @@
+### BEGIN DIGEST BLOCK
+#<Files staff-application.html>
+AuthType Digest
+AuthName "Staff Application is Closed"
+AuthDigestDomain zhyu.tk
+AuthUserFile /.htpasswd
+Require user admin
+Satisfy All
+#</Files>
+### END DIGEST BLOCK
+
+### BEGIN BASIC BLOCK
+#<Files staff-application.html>
+AuthType Basic
+AuthName "Staff Application is Closed"
+AuthUserFile /.htpasswd
+Require user admin
+Satisfy All
+#</Files>
+### END BASIC BLOCK
