@@ -97,7 +97,7 @@ function firebaseReady() {
             data = data.val();
             var date = new Date(data.date);
             var formatted_date = (date.getMonth() + 1) + "/" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes();
-            $("#chat-messages").prepend("<li data-toggle='tooltip' title='" + formatted_date + "' class='message-node' key='" + key + "'><img src='" + "https://minotar.net/helm/" + data.username + "/20.png" + "'> " + htmlEntities(data.username) + ": " + htmlEntities(data.body) + "</li>");
+            $("#chat-messages").prepend("<li data-toggle='tooltip' title='" + formatted_date + "' class='message-node' key='" + key + "'><img src='" + "https://minotar.net/helm/" + data.username + "/16.png" + "'> " + htmlEntities(data.username) + ": " + htmlEntities(data.body) + "</li>");
             $(".message-node:first").tooltip();
         });
         messages_ref.on('child_removed', function (data) {
