@@ -85,3 +85,10 @@ body {
 #chat-send-btn {
     border-top-right-radius: 0;
 }
+
+.dropdown-menu {
+    right: 0;
+    left: auto;
+    height: 100px;
+    overflow-y: auto;
+}

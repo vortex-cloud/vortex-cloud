@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Apply Leave</title>
+    <title>Leave Application</title>
     <script src="./jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
           integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="./index.css">
     <link rel="icon" href="./images/favicon.png">
-    <script src="main.js"></script>
+    <script src="./main.js"></script>
 </head>
 <body class="d-flex flex-column">
 <div id="header">
@@ -56,9 +54,11 @@
             <!--            </li>-->
         </ul>
     </div>
-    <span class="navbar-text ml-auto clearfix" id="server-stats">
+    <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          class="dropdown-toggle navbar-text ml-auto" id="server-stats">
         <b id="server-online"></b> <b>play.vortexcloud.tk</b> <span id="player-count"></span>
     </span>
+    <div id="players" class="dropdown-menu" aria-labelledby="player-count"></div>
 </nav>
 <div id="page-content">
     <div class="container">
@@ -128,8 +128,5 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-<script src="https://mcapi.us/scripts/minecraft.js"></script>
-</body>
-</html>
 </body>
 </html>

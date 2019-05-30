@@ -11,7 +11,7 @@
           integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="./index.css">
     <link rel="icon" href="./images/favicon.png">
-    <script src="main.js"></script>
+    <script src="./main.js"></script>
 </head>
 <body class="d-flex flex-column">
 <div id="header">
@@ -54,82 +54,77 @@
             <!--            </li>-->
         </ul>
     </div>
-    <span class="navbar-text ml-auto clearfix" id="server-stats">
+    <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          class="dropdown-toggle navbar-text ml-auto" id="server-stats">
         <b id="server-online"></b> <b>play.vortexcloud.tk</b> <span id="player-count"></span>
     </span>
+    <div id="players" class="dropdown-menu" aria-labelledby="player-count"></div>
 </nav>
 <div id="page-content">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-9 main-content">
-                <div class="row card-group mb-2">
-                    <div class="card col-md-6" style="width: 40rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Vortex Cloud Beta</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Beta Testing</h6>
-                            <p class="card-text">We have decided that this period will be dedicated to Beta-Testing!</p>
-                            <p class="card-text">If there is anything suggestions/bugs, please shout them out on our
-                                discord
-                                server!</p>
-                            <div class="alert alert-warning card-text">
-                                <img style="height:30px;" src="https://minotar.net/helm/JustDqg/256.png"
-                                     alt="JustDqg's Face"> <strong>[Owner] JustDqg</strong>: Staff Applications are now
-                                <strong>closed</strong>!
-                            </div>
-                            <a href="https://discord.gg/s4MNY7P" class="card-link">Discord</a>
-                            <div class="text-right">
-                                <small>Thu 30 May</small>
-                            </div>
-                        </div>
+        <div class="row card-group mb-2">
+            <div class="card col-md-6" style="width: 40rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Vortex Cloud Beta</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Beta Testing</h6>
+                    <p class="card-text">We have decided that this period will be dedicated to Beta-Testing!</p>
+                    <p class="card-text">If there is anything suggestions/bugs, please shout them out on our
+                        discord
+                        server!</p>
+                    <div class="alert alert-warning card-text">
+                        <img style="height:30px;" src="https://minotar.net/helm/JustDqg/256.png"
+                             alt="JustDqg's Face"> <strong>[Owner] JustDqg</strong>: Staff Applications are now
+                        <strong>closed</strong>!
                     </div>
-                    <div class="card col-md-6" style="width: 40rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Vortex Cloud Opening</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Vortex Cloud is now public!</h6>
-                            <p class="card-text">Today, on Sat 18 May, Vortex Cloud officially opened! Please note that
-                                the
-                                server's
-                                developing team are amateurs, hence there may be tons of bugs, please report any
-                                glitches/bugs/grammar
-                                errors
-                                <del>to
-                                    <a href="mailto:bug-report@vortexcloud.tk">bug-report@vortexcloud.tk</a></del>
-                                to <a href="https://discord.gg/WDjdVjA">#report-bugs</a> on discord.
-                            </p>
-                            <p class="card-text">We wish you good luck, and have a enjoyable day on our minecraft
-                                server:
-                                <b>play.vortexcloud.tk</b></p>
-                            <a href="http://vortexcloud.craft.gg:40729/" class="card-link">Map</a>
-                            <a href="https://discord.gg/s4MNY7P" class="card-link">Discord</a>
-                            <div class="text-right">
-                                <small>Sat 18 May</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row card-group mb-2">
-                    <div class="card col-md-6" style="width: 20rem;">
-                        <div class="card-body">
-                            <h5 class="card-title"><strong>Warning</strong></h5>
-                            <p class="card-text">Many of the functions in here including <strong>store</strong>,
-                                <strong>votes</strong> and <strong>bans</strong> are currently not available.</p>
-                            <p class="card-text">Please be patient for new functions to be rolled out in the future. In
-                                the
-                                mean
-                                time, suggest functions/changes
-                                <del>to <a href="mailto:support@vortexcloud.tk">support@vortexcloud.tk</a></del>
-                                to <a href="https://discord.gg/K8ztV4C">#suggestions</a> on discord.
-                            </p>
-                            <div class="text-right">
-                                <small>Fri 17 May</small>
-                            </div>
-                        </div>
+                    <a href="https://discord.gg/s4MNY7P" class="card-link">Discord</a>
+                    <div class="text-right">
+                        <small>Thu 30 May</small>
                     </div>
                 </div>
             </div>
-            <iframe class="col-lg-3 discord" style="min-height: 300px;" id="discord-stats"
-                    src="https://discordapp.com/widget?id=563829163224465410&theme=light" allowtransparency="true"
-                    frameborder="0"></iframe>
+            <div class="card col-md-6" style="width: 40rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Vortex Cloud Opening</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Vortex Cloud is now public!</h6>
+                    <p class="card-text">Today, on Sat 18 May, Vortex Cloud officially opened! Please note that
+                        the
+                        server's
+                        developing team are amateurs, hence there may be tons of bugs, please report any
+                        glitches/bugs/grammar
+                        errors
+                        <del>to
+                            <a href="mailto:bug-report@vortexcloud.tk">bug-report@vortexcloud.tk</a></del>
+                        to <a href="https://discord.gg/WDjdVjA">#report-bugs</a> on discord.
+                    </p>
+                    <p class="card-text">We wish you good luck, and have a enjoyable day on our minecraft
+                        server:
+                        <b>play.vortexcloud.tk</b></p>
+                    <a href="http://vortexcloud.craft.gg:40729/" class="card-link">Map</a>
+                    <a href="https://discord.gg/s4MNY7P" class="card-link">Discord</a>
+                    <div class="text-right">
+                        <small>Sat 18 May</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row card-group mb-2">
+            <div class="card col-md-6" style="width: 20rem;">
+                <div class="card-body">
+                    <h5 class="card-title"><strong>Warning</strong></h5>
+                    <p class="card-text">Many of the functions in here including <strong>store</strong>,
+                        <strong>votes</strong> and <strong>bans</strong> are currently not available.</p>
+                    <p class="card-text">Please be patient for new functions to be rolled out in the future. In
+                        the
+                        mean
+                        time, suggest functions/changes
+                        <del>to <a href="mailto:support@vortexcloud.tk">support@vortexcloud.tk</a></del>
+                        to <a href="https://discord.gg/K8ztV4C">#suggestions</a> on discord.
+                    </p>
+                    <div class="text-right">
+                        <small>Fri 17 May</small>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -143,13 +138,5 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-<script src="https://mcapi.us/scripts/minecraft.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
-    new Crate({
-        server: '563829163224465410',
-        channel: '563836090671431701',
-        shard: 'https://disweb.deploys.io'
-    })
-</script>
 </body>
 </html>

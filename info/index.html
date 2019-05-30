@@ -47,16 +47,18 @@
                                                                                  aria-hidden="true"></i>&nbsp; Map</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="./info"><i class="fas fa-book"></i>&nbsp; Info</a>
+                <a class="nav-link" href="../info"><i class="fas fa-book"></i>&nbsp; Info</a>
             </li>
             <!--            <li class="nav-item">-->
             <!--                <a class="nav-link disabled"><i class="fa fa-gavel" aria-hidden="true"></i>&nbsp; Bans</a>-->
             <!--            </li>-->
         </ul>
     </div>
-    <span class="navbar-text ml-auto clearfix" id="server-stats">
+    <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          class="dropdown-toggle navbar-text ml-auto" id="server-stats">
         <b id="server-online"></b> <b>play.vortexcloud.tk</b> <span id="player-count"></span>
     </span>
+    <div id="players" class="dropdown-menu" aria-labelledby="player-count"></div>
 </nav>
 <div id="page-content">
     <div class="container">
@@ -91,6 +93,5 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-<script src="https://mcapi.us/scripts/minecraft.js"></script>
 </body>
 </html>
