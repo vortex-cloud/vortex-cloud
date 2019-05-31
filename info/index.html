@@ -14,126 +14,148 @@
     <script src="../main.js"></script>
 </head>
 <body class="d-flex flex-column">
-<div id="header">
-    <img id="header_icon" src="../images/hdicon.png" alt="VC"/>
-</div>
-
-<nav class="navbar navbar-expand-lg bg-light navbar-light sticky-top" id="navbar">
-    <a class="navbar-brand ml-auto" href="https://vortexcloud.tk">
-        <img src="../images/hdicon.png" alt="Logo" style="width:40px;"> Vortex Cloud
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<div id="header"><img id="header_icon" src="../images/hdicon.png" alt="VC"/></div>
+<nav class="navbar navbar-expand-lg bg-light navbar-light sticky-top" id="navbar"><a class="navbar-brand ml-auto"
+                                                                                     href="https://vortexcloud.tk"> <img
+        src="../images/hdicon.png" alt="Logo" style="width:40px;"> Vortex Cloud </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"><span
+            class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="https://vortexcloud.tk"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;
-                    Home</a>
+            <li class="nav-item"><a class="nav-link" href="https://vortexcloud.tk"><i class="fa fa-home"
+                                                                                      aria-hidden="true"></i>&nbsp; Home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://forum.vortexcloud.tk"><i class="fas fa-comment-alt"></i> Forums</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="http://store.vortexcloud.tk"><i class="fas fa-store" aria-hidden="true"></i>&nbsp;
-                    Store</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://discord.gg/s4MNY7P"><i class="fab fa-discord" aria-hidden="true"></i>&nbsp;
-                    Discord</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="http://vortexcloud.craft.gg:40729/"><i class="fa fa-map"
-                                                                                 aria-hidden="true"></i>&nbsp; Map</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="../info"><i class="fas fa-book"></i>&nbsp; Info</a>
-            </li>
-            <!--            <li class="nav-item">-->
+            <li class="nav-item"><a class="nav-link" href="https://forum.vortexcloud.tk"><i
+                    class="fas fa-comment-alt"></i> Forums</a></li>
+            <li class="nav-item"><a class="nav-link" href="http://store.vortexcloud.tk"><i class="fas fa-store"
+                                                                                           aria-hidden="true"></i>&nbsp;
+                Store</a></li>
+            <li class="nav-item"><a class="nav-link" target="_blank" href="https://discord.gg/s4MNY7P"><i
+                    class="fab fa-discord"
+                    aria-hidden="true"></i>&nbsp;
+                Discord</a></li>
+            <li class="nav-item"><a class="nav-link" href="http://vortexcloud.craft.gg:40729/"><i class="fa fa-map"
+                                                                                                  aria-hidden="true"></i>&nbsp;
+                Map</a></li>
+            <li class="nav-item active"><a class="nav-link" href="../info"><i class="fas fa-book"></i>&nbsp; Info</a>
+            </li>             <!--            <li class="nav-item">-->
             <!--                <a class="nav-link disabled"><i class="fa fa-gavel" aria-hidden="true"></i>&nbsp; Bans</a>-->
             <!--            </li>-->
         </ul>
     </div>
-    <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-          class="dropdown-toggle navbar-text ml-auto" id="server-stats">
-        <b id="server-online"></b> <b>play.vortexcloud.tk</b> <span id="player-count"></span>
-    </span>
+    <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle navbar-text ml-auto"
+          id="server-stats">         <b id="server-online"></b> <b>play.vortexcloud.tk</b> <span
+            id="player-count"></span>     </span>
     <div id="players" class="dropdown-menu" aria-labelledby="player-count"></div>
 </nav>
 <div id="page-content">
-    <div class="container">
-        <a href="#" class="mb-2" data-toggle="collapse" data-target="#contents"><b>Contents</b>
-        </a>
-        <ul id="contents" class="collapse hide mb-0">
-            <li><a href="#rules-anchor">Rules</a>
-                <ul>
-                    <li><a href="#discord-rules-anchor">Discord Rules</a>
-                        <ul>
-                            <li><a href="#text-based-rules-anchor">Text-Based Chat Rules</a></li>
-                            <li><a href="#voice-based-rules-anchor">Voice-Based Chat Rules</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#minecraft-rules-anchor">Minecraft Rules</a>
-                        <ul>
-                            <li><a href="#game-play-rules-anchor">Game Play Rules</a></li>
-                            <li><a href="#mc-chat-rules-anchor">Chat Rules</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#addon-rules-anchor">Additional Rules</a></li>
-                </ul>
-            </li>
-            <li>Links</li>
-            <li>Additional Information</li>
-        </ul>
-        <div id="information" class="mt-3">
-            <a class="anchor" id="rules-anchor"></a>
-            <h4><strong>Rules</strong></h4>
+    <div class="container"><a href="#" class="mb-2" data-toggle="collapse" data-target="#contents"><b>Contents</b> </a>
+        <div id="contents" class="collapse hide mb-0">
+            <a href="#svr-info-anchor">Server Information</a>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="#basic-info-anchor">Basic Information</a></li>
+            </ul>
+            <a href="#rules-anchor">Rules</a>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="#discord-rules-anchor">Discord Rules</a>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#text-based-rules-anchor">Text-Based Chat Rules</a>
+                        </li>
+                        <li class="list-group-item"><a href="#voice-based-rules-anchor">Voice-Based Chat Rules</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list-group-item"><a href="#minecraft-rules-anchor">Minecraft Rules</a>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#game-play-rules-anchor">Game Play Rules</a></li>
+                        <li class="list-group-item"><a href="#mc-chat-rules-anchor">Chat Rules</a></li>
+                    </ul>
+                </li>
+                <li class="list-group-item"><a href="#addon-rules-anchor">Additional Rules</a></li>
+            </ul>
+        </div>
+        <div id="information" class="mt-3"><a class="anchor" id="svr-info-anchor"></a>
+            <h4><strong>Server Information</strong></h4>
+            <div id="svr-info" class="ml-3 mb-2"><a class="anchor" id="basic-info-anchor"></a>
+                <div id="basic-info"><h4><strong>Basics</strong></h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <strong>Minecraft Server: </strong><br>
+                            <div class="btn-group p-2"><span class="btn btn-info">Server IP:</span> <span
+                                    class="btn btn-light">play.vortexcloud.tk</span>
+                                <button type="button" class="btn btn-success btn-copy js-tooltip js-copy"
+                                        data-toggle="tooltip"
+                                        data-placement="bottom" data-copy="play.vortexcloud.tk"
+                                        title="Copy to clipboard"><i
+                                        class="far fa-copy"></i></button>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <strong onclick="$('#discord-stats').slideToggle();">Discord Server: </strong>
+                            <a class="nav-link" target="_blank" href="https://discord.gg/s4MNY7P">
+                                <i class="fab fa-discord" aria-hidden="true" target="_blank"></i>
+                                https://discord.gg/s4MNY7P</a>
+                            <iframe class="col-lg-3 discord"
+                                    style="height: 400px; max-width:100%; width:300px;display:none;"
+                                    id="discord-stats"
+                                    src="https://discordapp.com/widget?id=563829163224465410&theme=light"
+                                    allowtransparency="true"
+                                    frameborder="0"></iframe>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Tutorials:</strong><br>
+                            <a href="tutorial.html"><strong>Simple Tutorial</strong></a> by lolly1.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a class="anchor" id="rules-anchor"></a>             <h4><strong>Rules</strong></h4>
             <div id="rules" class="ml-3">
                 <a class="anchor" id="discord-rules-anchor"></a>
-                <div id="discord-rules">
-                    <h4><strong>Discord Rules</strong></h4>
+                <div id="discord-rules" class="mb-2"><h4><strong>Discord Rules</strong></h4>
                     <a class="anchor" id="text-based-rules-anchor"></a>
-                    <h5 id="text-based-rules"><strong>Text-Based</strong> Chat Rules<br>
+                    <h5 id="text-based-rules" class="mt-2"><strong>Text-Based</strong> Chat Rules<br>
                         <small>These rules will apply in all text-based discord channels, a violation will result in a
                             warning and temp-mute in case of repeated offense.
                         </small>
                     </h5>
-                    <ol>
-                        <li><strong>PG13:</strong> The server is PG13 and all chat must be. Profane or mature language
-                            is not allowed in chat.
+                    <ol class="list-group">
+                        <li class="list-group-item"><strong>PG13:</strong> The server is PG13 and all chat must be.
+                            Profane or mature language is not allowed in chat.
                         </li>
-                        <li><strong>Chat Abuse:</strong> All abusive chat usage is not allowed. This includes <i>spamming,
-                            begging, encourage others to spam and self-advertising</i>.
+                        <li class="list-group-item"><strong>Chat Abuse:</strong> All abusive chat usage is not allowed.
+                            This includes <i>spamming, begging, encourage others to spam and self-advertising</i>.
                         </li>
-                        <li><strong>Common Sense:</strong> Use channels for what they are meant for, <i>e.g. talking
-                            about marriage invites in #general is not allowed</i>.
+                        <li class="list-group-item"><strong>Common Sense:</strong> Use channels for what they are meant
+                            for, <i>e.g. talking about marriage invites in #general is not allowed</i>.
                         </li>
-                        <li><strong>Equality:</strong> All players/users are equal, you are expected to treat all
-                            players with equality and respect. Hence all kind of <i>racism, hatred, cyber bully, toxic
-                                behaviors, etc</i> is not allowed.
+                        <li class="list-group-item"><strong>Equality:</strong> All players/users are equal, you are
+                            expected to treat all players with equality and respect. Hence all kind of <i>racism,
+                                hatred, cyber bully, toxic behaviors, etc</i> is not allowed.
                         </li>
-                        <li><strong>Honesty:</strong> Players are expected to provide accurate information to staff
-                            members. <i>e.g. “I maybe xraying” is not allowed</i>.
+                        <li class="list-group-item"><strong>Honesty:</strong> Players are expected to provide accurate
+                            information to staff members. <i>e.g. “I maybe xraying” is not allowed</i>.
                         </li>
                     </ol>
                     <a class="anchor" id="voice-based-rules-anchor"></a>
-                    <h5 id="voice-based-rules"><strong>Voice-Based</strong> Chat Rules<br>
+                    <h5 id="voice-based-rules" class="mt-2"><strong>Voice-Based</strong> Chat Rules<br>
                         <small>These rules will apply in all voice-based discord channels, a violation will result in a
                             warning and temp-mute/temp-ban in case of repeated offense.<br><a
                                     href="#text-based-rules-anchor">Applicable text-based rules</a> also apply.
                         </small>
                     </h5>
-                    <ol>
-                        <li><strong>ChatBot Abuse:</strong> Abusing any bot/text-to-speech to play inappropriate sounds
-                            is strictly not allowed. <i>e.g. Using Rythm Bot to play "Somebody Once told me" memes</i>.
+                    <ol class="list-group">
+                        <li class="list-group-item"><strong>ChatBot Abuse:</strong> Abusing any bot/text-to-speech to
+                            play inappropriate sounds is strictly not allowed. <i>e.g. Using Rythm Bot to play "Somebody
+                                Once told me" memes</i>.
                         </li>
-                        <li><strong>Voice Chat Abuse:</strong> Speak super loudly and using voice changers etc are not
-                            allowed.
+                        <li class="list-group-item"><strong>Voice Chat Abuse:</strong> Speak super loudly and using
+                            voice changers etc are not allowed.
                         </li>
                     </ol>
                 </div>
                 <a class="anchor" id="minecraft-rules-anchor"></a>
-                <div id="minecraft-rules">
+                <div id="minecraft-rules" class="mb-2">
                     <h4><strong>Minecraft Rules</strong></h4>
                     <a class="anchor" id="game-play-rules-anchor"></a>
                     <h5 id="game-play-rules"><strong>Game Play</strong> Rules<br>
@@ -141,72 +163,94 @@
                             temp-ban in case of repeated offense.
                         </small>
                     </h5>
-                    <ol>
-                        <li><strong>Cheats:</strong> All kind of hacked clients, plugins and mods that gives a player
-                            unfair advantage over others will not be tolerated. <i>e.g. Fly Hack</i>
+                    <ol class="list-group">
+                        <li class="list-group-item"><strong>Cheats:</strong> All kind of hacked clients, plugins and
+                            mods that gives a player unfair advantage over others will not be tolerated. <i>e.g. Fly
+                                Hack</i></li>
+                        <li class="list-group-item"><strong>TP-Killing:</strong> We define tp-killing as requesting
+                            other players to teleport to you and kill them intentionally or unintentionally
+                            afterward.<br>If both players are able to come to an agreement on the matter, the staff team
+                            will ignore the issue, if not, the killer will receive warn/temp-banned if he returns the
+                            items and longer ban/perm ban if otherwise. <i>e.g. "Tpa for free diamonds!"</i></li>
+                        <li class="list-group-item"><strong>Server Griefing:</strong> Usage of lag machines, exploits,
+                            and bugs, etc to harm the server in any way are not allowed, the player will be
+                            warned/temp-banned and the machine/mechanism used will be forcefully removed</i>.
                         </li>
-                        <li><strong>TP-Killing:</strong> We define tp-killing as requesting other players to teleport to
-                            you and kill them intentionally or unintentionally afterward.<br>If both players are able
-                            to come to an agreement on the matter, the staff team will ignore the issue, if not, the
-                            killer
-                            will receive warn/temp-banned if he returns the items and longer ban/perm ban if otherwise.
-                            <i>e.g. "Tpa for free diamonds!"</i></li>
-                        <li><strong>Server Griefing:</strong> Usage of lag machines, exploits, and bugs, etc to harm the
-                            server in any way are not allowed, the player will be warned/temp-banned and the
-                            machine/mechanism used will be forcefully removed</i>.
-                        </li>
-                        <li><strong>Player:</strong> Any methods of trapping, controlling or exerting control over
-                            another player, even including hacking into their accounts, is not allowed. Simple
-                            threatening or anger-driven actions that are reasonable will result in a warning, while
-                            players on second-offense and higher will get temp-muted or temp-banned. <i>e.g. Nether
-                                Portal Traps, Bed Killing</i>.
+                        <li class="list-group-item"><strong>Player:</strong> Any methods of trapping, controlling or
+                            exerting control over another player, even including hacking into their accounts, is not
+                            allowed. Simple threatening or anger-driven actions that are reasonable will result in a
+                            warning, while players on second-offense and higher will get temp-muted or temp-banned. <i>e.g.
+                                Nether Portal Traps, Bed Killing</i>.
                         </li>
                     </ol>
                     <a class="anchor" id="mc-chat-rules-anchor"></a>
-                    <h5 id="mc-chat-rules"><strong>Chat</strong> Rules<br>
+                    <h5 id="mc-chat-rules" class="mt-2"><strong>Chat</strong> Rules<br>
                         <small>These rules will apply on our Minecraft server's chat, a violation will result in a
-                            warning
-                            and temp-mute in case of repeated offense.
+                            warning and temp-mute in case of repeated offense.
                         </small>
                     </h5>
-                    <ol>
-                        <li><strong>Chat:</strong> All <a href="#text-based-rules-anchor">applicable discord text-based
-                            rules</a> apply.
+                    <ol class="list-group">
+                        <li class="list-group-item"><strong>Chat:</strong> All <a href="#text-based-rules-anchor">applicable
+                            discord text-based rules</a> apply.
                         </li>
-                        <li><strong>Begging:</strong> Asking for items, money or ranks, etc in public chat with/without
-                            a
-                            target person repeatedly (x10+) within a period of 5 minutes is regarded as begging and it's
-                            not allowed.
+                        <li class="list-group-item"><strong>Begging:</strong> Asking for items, money or ranks, etc in
+                            public chat with/without a target person repeatedly (x10+) within a period of 5 minutes is
+                            regarded as begging and it's not allowed.
                         </li>
-                        <li><strong>Command Abuse:</strong> Abusing commands that you have or have bought is not
-                            allowed. <i>e.g.Impersonating staff members using the /nick command</i>.
-                        </li>
-                    </ol>
-                </div>
-                <a class="anchor" id="addon-rules-anchor"></a>
-                <div id="addon-rules">
-                    <h4><strong>Additional Rules</strong></h4>
-                    <ol>
-                        <li><i>Nothing! Hooray! May have more in the future.</i>
+                        <li class="list-group-item"><strong>Command Abuse:</strong> Abusing commands that you have or
+                            have bought is not allowed. <i>e.g.Impersonating staff members using the /nick command</i>.
                         </li>
                     </ol>
                 </div>
+                <a class="anchor" class="mb-2" id="addon-rules-anchor"></a>
+                <div id="addon-rules"><h4><strong>Additional Rules</strong></h4>
+                    <ol class="list-group">
+                        <li class="list-group-item"><i>Nothing! Hooray! May have more in the future.</i></li>
+                    </ol>
+                </div>
             </div>
-            <div id="links">
-
-            </div>
+            <div id="links"></div>
         </div>
     </div>
 </div>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
-    <span class="navbar-text" style="text-align: center; width:100%;">Vortex Team • Minecraft is a copyright of Mojang AB. All rights reserved.</span>
-</nav>
-<!-- Scripts -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom"><span class="navbar-text"
+                                                                            style="text-align: center; width:100%;">Vortex Team • Minecraft is a copyright of Mojang AB. All rights reserved.</span>
+</nav> <!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+<script>     function copyToClipboard(text, el) {
+    let copyTest = document.queryCommandSupported('copy');
+    let elOriginalText = el.attr('data-original-title');
+    if (copyTest === true) {
+        let copyTextArea = document.createElement("textarea");
+        copyTextArea.value = text;
+        document.body.appendChild(copyTextArea);
+        copyTextArea.select();
+        try {
+            let successful = document.execCommand('copy');
+            let msg = successful ? 'Copied!' : 'Whoops, not copied!';
+            el.attr('data-original-title', msg).tooltip('show');
+        } catch (err) {
+            console.log('Oops, unable to copy');
+        }
+        document.body.removeChild(copyTextArea);
+        el.attr('data-original-title', elOriginalText);
+    } else {             // Fallback if browser doesn't support .execCommand('copy')
+        window.prompt("Copy to clipboard: Ctrl+C or Command+C, Enter", text);
+    }
+}
+
+$(document).ready(function () {
+    $('.js-tooltip').tooltip();
+    $('.js-copy').click(function () {
+        const text = $(this).attr('data-copy');
+        const el = $(this);
+        copyToClipboard(text, el);
+    });
+}); </script>
 </body>
 </html>
