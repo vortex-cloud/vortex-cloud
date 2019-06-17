@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Vote</title>
+    <script src="../jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="icon" href="../images/favicon.png">
+    <script src="../main.js"></script>
+</head>
+<body class="d-flex flex-column">
+<div id="header">
+    <img id="header_icon" src="../images/hdicon.png" alt="VC"/>
+</div>
+
+<nav class="navbar navbar-expand-lg bg-light navbar-light sticky-top" id="navbar">
+    <a class="navbar-brand ml-auto" href="https://vortexcloud.tk">
+        <img src="../images/hdicon.png" alt="Logo" style="width:40px;"> Vortex Cloud
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="https://vortexcloud.tk"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;
+                    Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://store.vortexcloud.tk"><i class="fas fa-store" aria-hidden="true"></i>&nbsp;
+                    Store</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" target="_blank" href="https://discord.gg/s4MNY7P"><i class="fab fa-discord"
+                                                                                         aria-hidden="true"></i>&nbsp;
+                    Discord</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://vortexcloud.craft.gg:40729/"><i class="fa fa-map"
+                                                                                 aria-hidden="true"></i>&nbsp; Map</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../info"><i class="fas fa-book"></i>&nbsp; Info</a>
+            </li>
+            <!--            <li class="nav-item">-->
+            <!--                <a class="nav-link disabled"><i class="fa fa-gavel" aria-hidden="true"></i>&nbsp; Bans</a>-->
+            <!--            </li>-->
+            <li class="nav-item">
+                <a class="nav-link" href="../vote"><i class="far fa-thumbs-up"></i>&nbsp; Vote</a>
+            </li>
+        </ul>
+    </div>
+    <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          class="dropdown-toggle navbar-text ml-auto" id="server-stats">
+        <b id="server-online"></b> <b>play.vortexcloud.tk</b> <span id="player-count"></span>
+    </span>
+    <div id="players" class="dropdown-menu" aria-labelledby="player-count"></div>
+</nav>
+<div id="page-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3"><h2>Vote</h2>
+                <p>Over here you can vote for our server!</p>
+                <p>Our server is still in its beta, more players will surely help us a lot!</p>
+                <p>In the near future, voting will also be rewarded with some goodies in-game!</p></div>
+            <iframe src="https://minecraftservers.org/vote/552715" frameborder="0" class="col-lg-9"
+                    height="550px"></iframe>
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
+    <span class="navbar-text" style="text-align: center; width:100%;">Vortex Team • Minecraft is a copyright of Mojang AB. All rights reserved.</span>
+</nav>
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
