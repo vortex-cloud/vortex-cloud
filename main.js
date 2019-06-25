@@ -1,5 +1,5 @@
 const el1 = document.getElementById("dark-theme");
-if(localStorage.ha("dark"))
+if (localStorage.getItem("dark") === null) localStorage.setItem("dark", "disabled");
 el1.disabled = localStorage.getItem("dark") !== "enabled";
 
 function dark_toggle() {
