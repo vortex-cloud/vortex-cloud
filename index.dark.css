@@ -61,15 +61,6 @@ select:-webkit-autofill {
     border-left-color: rgba(102, 102, 102, 0.13);
 }
 
-.btn-light {
-    color: rgb(218, 215, 210);
-    background-color: rgb(26, 28, 29);
-    border-top-color: rgb(47, 56, 66);
-    border-right-color: rgb(47, 56, 66);
-    border-bottom-color: rgb(47, 56, 66);
-    border-left-color: rgb(47, 56, 66);
-}
-
 a:hover {
     color: rgb(97, 183, 255);
     text-decoration-color: initial;
@@ -100,6 +91,72 @@ a:hover {
     border-right-color: rgb(41, 99, 54);
     border-bottom-color: rgb(41, 99, 54);
     border-left-color: rgb(41, 99, 54);
+}
+
+.form-control {
+    color: rgb(202, 198, 190);
+    background-color: rgb(24, 26, 27);
+    border-top-color: rgb(54, 63, 72);
+    border-right-color: rgb(54, 63, 72);
+    border-bottom-color: rgb(54, 63, 72);
+    border-left-color: rgb(54, 63, 72);
+}
+
+.form-control:focus {
+    color: rgb(202, 198, 190);
+    background-color: rgb(24, 26, 27);
+    border-top-color: rgb(0, 86, 178);
+    border-right-color: rgb(0, 86, 178);
+    border-bottom-color: rgb(0, 86, 178);
+    border-left-color: rgb(0, 86, 178);
+    outline-color: initial;
+    box-shadow: rgba(0, 98, 204, 0.25) 0px 0px 0px 0.2rem;
+}
+
+/*Buttons*/
+.btn-light {
+    color: rgb(218, 215, 210);
+    background-color: rgb(26, 28, 29);
+    border-top-color: rgb(47, 56, 66);
+    border-right-color: rgb(47, 56, 66);
+    border-bottom-color: rgb(47, 56, 66);
+    border-left-color: rgb(47, 56, 66);
+}
+
+.btn-info {
+    color: rgb(255, 255, 255);
+    background-color: rgb(21, 146, 166);
+    border-top-color: rgb(22, 158, 180);
+    border-right-color: rgb(22, 158, 180);
+    border-bottom-color: rgb(22, 158, 180);
+    border-left-color: rgb(22, 158, 180);
+}
+
+.btn-outline-primary {
+    color: rgb(51, 162, 255);
+    border-top-color: rgb(0, 98, 204);
+    border-right-color: rgb(0, 98, 204);
+    border-bottom-color: rgb(0, 98, 204);
+    border-left-color: rgb(0, 98, 204);
+}
+
+.btn {
+    color: rgb(218, 215, 210);
+    background-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+/*End Buttons*/
+.input-group-text {
+    color: rgb(202, 198, 190);
+    background-color: rgb(30, 32, 34);
+    border-top-color: rgb(54, 63, 72);
+    border-right-color: rgb(54, 63, 72);
+    border-bottom-color: rgb(54, 63, 72);
+    border-left-color: rgb(54, 63, 72);
 }
 
 .text-muted {
