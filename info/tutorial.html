@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
           integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="../index.css">
+    <link id="dark-theme" rel="stylesheet" href="../index.dark.css" disabled>
     <link rel="icon" href="../images/favicon.png">
     <script src="../main.js"></script>
 </head>
@@ -52,6 +53,9 @@
             <!--            </li>-->
             <li class="nav-item">
                 <a class="nav-link" href="../vote"><i class="far fa-thumbs-up"></i>&nbsp; Vote</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="dark_toggle();return;" href="#"><i class="far fa-moon"></i></a>
             </li>
         </ul>
     </div>

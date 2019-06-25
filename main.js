@@ -1,4 +1,14 @@
+const el1 = document.getElementById("dark-theme");
+el1.disabled = localStorage.getItem("dark") !== "enabled";
+
+function dark_toggle() {
+    el1.disabled = !el1.disabled;
+    localStorage.setItem("dark", el1.disabled ? "disabled" : "enabled");
+    return el1.disabled ? $("#navbar").addClass("bg-light").addClass("navbar-light").removeClass("bg-dark").removeClass("navbar-dark") : $("#navbar").removeClass("bg-light").removeClass("navbar-light").addClass("bg-dark").addClass("navbar-dark");
+}
+
 $(document).ready(function () {
+    el1.disabled ? $("#navbar").addClass("bg-light").addClass("navbar-light").removeClass("bg-dark").removeClass("navbar-dark") : $("#navbar").removeClass("bg-light").removeClass("navbar-light").addClass("bg-dark").addClass("navbar-dark");
     $.get("https://api.minetools.eu/query/play.vortexcloud.tk"
     ).done(function (query) {
         if (query.status === "OK") {
@@ -12,7 +22,7 @@ $(document).ready(function () {
                 }
                 final = final.substring(4);
                 $("#players").html(final);
-            }else{
+            } else {
                 $("#players").html("<i class='ml-2'>No Players Online</i>");
             }
         } else {

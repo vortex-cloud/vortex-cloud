@@ -1,0 +1,112 @@
+html {
+    background-color: #181a1b !important;
+}
+
+body {
+    color: rgb(218, 215, 210);
+    background-color: rgb(24, 26, 27);
+}
+
+html, body, input, textarea, select, button {
+    background-color: #181a1b;
+}
+
+html, body, input, textarea, select, button {
+    border-color: #575757;
+    color: #e8e6e3;
+}
+
+a {
+    color: #3391ff;
+}
+
+table {
+    border-color: #4c4c4c;
+}
+
+::placeholder {
+    color: #bab5ab;
+}
+
+::selection {
+    background-color: #005ccc;
+    color: #ffffff;
+}
+
+::-moz-selection {
+    background-color: #005ccc;
+    color: #ffffff;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #545b00 !important;
+    color: #e8e6e3 !important;
+}
+
+.card {
+    background-color: rgb(24, 26, 27);
+    border-top-color: rgba(102, 102, 102, 0.13);
+    border-right-color: rgba(102, 102, 102, 0.13);
+    border-bottom-color: rgba(102, 102, 102, 0.13);
+    border-left-color: rgba(102, 102, 102, 0.13);
+}
+
+.list-group-item {
+    background-color: rgb(24, 26, 27);
+    border-top-color: rgba(102, 102, 102, 0.13);
+    border-right-color: rgba(102, 102, 102, 0.13);
+    border-bottom-color: rgba(102, 102, 102, 0.13);
+    border-left-color: rgba(102, 102, 102, 0.13);
+}
+
+.btn-light {
+    color: rgb(218, 215, 210);
+    background-color: rgb(26, 28, 29);
+    border-top-color: rgb(47, 56, 66);
+    border-right-color: rgb(47, 56, 66);
+    border-bottom-color: rgb(47, 56, 66);
+    border-left-color: rgb(47, 56, 66);
+}
+
+a:hover {
+    color: rgb(97, 183, 255);
+    text-decoration-color: initial;
+}
+
+.dropdown-menu {
+    color: rgb(218, 215, 210);
+    background-color: rgb(24, 26, 27);
+    border-top-color: rgba(102, 102, 102, 0.15);
+    border-right-color: rgba(102, 102, 102, 0.15);
+    border-bottom-color: rgba(102, 102, 102, 0.15);
+    border-left-color: rgba(102, 102, 102, 0.15);
+}
+
+.alert-warning {
+    color: rgb(251, 219, 127);
+    background-color: rgb(81, 62, 0);
+    border-top-color: rgb(167, 126, 0);
+    border-right-color: rgb(167, 126, 0);
+    border-bottom-color: rgb(167, 126, 0);
+    border-left-color: rgb(167, 126, 0);
+}
+
+.alert-success {
+    color: rgb(168, 234, 183);
+    background-color: rgb(23, 54, 30);
+    border-top-color: rgb(41, 99, 54);
+    border-right-color: rgb(41, 99, 54);
+    border-bottom-color: rgb(41, 99, 54);
+    border-left-color: rgb(41, 99, 54);
+}
+
+.text-muted {
+    color: rgb(189, 184, 174) !important;
+}
+
+/*Predefined Values End*/
+#header_icon, #nav_icon {
+    content: url("./images/hdicon_dark.png");
+}
