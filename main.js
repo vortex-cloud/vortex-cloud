@@ -5,13 +5,15 @@ el1.disabled = localStorage.getItem("dark") !== "enabled";
 function dark_toggle() {
     el1.disabled = !el1.disabled;
     localStorage.setItem("dark", el1.disabled ? "disabled" : "enabled");
+    $("#dark-moon").html(el1.disabled ? "<i class=\"far fa-moon\"></i>" : "<i class=\"fas fa-moon\"></i>");
     return el1.disabled ? $("#navbar").addClass("bg-light").addClass("navbar-light").removeClass("bg-dark").removeClass("navbar-dark") : $("#navbar").removeClass("bg-light").removeClass("navbar-light").addClass("bg-dark").addClass("navbar-dark");
 }
 
 $(document).ready(function () {
+    $("#dark-moon").click(dark_toggle);
+    $("#dark-moon").html(el1.disabled ? "<i class=\"far fa-moon\"></i>" : "<i class=\"fas fa-moon\"></i>");
     el1.disabled ? $("#navbar").addClass("bg-light").addClass("navbar-light").removeClass("bg-dark").removeClass("navbar-dark") : $("#navbar").removeClass("bg-light").removeClass("navbar-light").addClass("bg-dark").addClass("navbar-dark");
-    $.get("https://api.minetools.eu/query/play.vortexcloud.tk"
-    ).done(function (query) {
+    $.get("https://api.minetools.eu/query/play.vortexcloud.tk").done(function (query) {
         if (query.status === "OK") {
             $("#server-online").html('<i class="fa fa-check"></i>');
             $("#player-count").html(query.Players + "/" + query.MaxPlayers);
