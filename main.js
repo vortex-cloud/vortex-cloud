@@ -9,11 +9,12 @@ function dark_toggle() {
     return el1.disabled ? $("#navbar").addClass("bg-light").addClass("navbar-light").removeClass("bg-dark").removeClass("navbar-dark") : $("#navbar").removeClass("bg-light").removeClass("navbar-light").addClass("bg-dark").addClass("navbar-dark");
 }
 
-$(document).ready(function () {
+$(document).ready(function() {
+    $('body').find('img[src$="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"]').remove();
     $("#dark-moon").click(dark_toggle);
     $("#dark-moon").html(el1.disabled ? "<i class=\"far fa-moon\"></i>" : "<i class=\"fas fa-moon\"></i>");
     el1.disabled ? $("#navbar").addClass("bg-light").addClass("navbar-light").removeClass("bg-dark").removeClass("navbar-dark") : $("#navbar").removeClass("bg-light").removeClass("navbar-light").addClass("bg-dark").addClass("navbar-dark");
-    $.get("https://api.minetools.eu/query/play.vortexcloud.tk").done(function (query) {
+    $.get("https://api.minetools.eu/query/play.vortexcloud.tk").done(function(query) {
         if (query.status === "OK") {
             $("#server-online").html('<i class="fa fa-check"></i>');
             $("#player-count").html(query.Players + "/" + query.MaxPlayers);
@@ -32,7 +33,7 @@ $(document).ready(function () {
             $("#server-online").html('<i class="fas fa-times"></i>');
             $("#player-count").html(query.status);
         }
-    }).fail(function () {
+    }).fail(function() {
         $("#server-online").html('?');
     });
 });
