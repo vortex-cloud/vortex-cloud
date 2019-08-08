@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Title</title>
+    <script src="../jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="../index.css">
+    <link id="dark-theme" rel="stylesheet" href="../index.dark.css" disabled>
+    <link rel="icon" href="../images/favicon.png">
+    <script src="../main.js"></script>
+</head>
+<body class="d-flex flex-column">
+<div id="header">
+    <img id="header_icon" src="../images/hdicon.png" alt="VC"/>
+</div>
+
+<nav class="navbar navbar-expand-lg bg-light navbar-light sticky-top" id="navbar">
+    <a class="navbar-brand ml-auto" href="https://vortexcloud.tk">
+        <img id="nav_icon" src="../images/hdicon.png" alt="Logo" style="width:40px;"> Vortex Cloud
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="https://vortexcloud.tk"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;
+                    Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://store.vortexcloud.tk"><i class="fas fa-store" aria-hidden="true"></i>&nbsp;
+                    Store</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" target="_blank" href="https://discord.io/vortexcloud"><i class="fab fa-discord"
+                                                                                             aria-hidden="true"></i>&nbsp;
+                    Discord</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://vortexcloud.craft.gg:40729/"><i class="fa fa-map"
+                                                                                 aria-hidden="true"></i>&nbsp; Map</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../info"><i class="fas fa-book"></i>&nbsp; Info</a>
+            </li>
+            <!--            <li class="nav-item">-->
+            <!--                <a class="nav-link disabled"><i class="fa fa-gavel" aria-hidden="true"></i>&nbsp; Bans</a>-->
+            <!--            </li>-->
+            <li class="nav-item">
+                <a class="nav-link" href="../vote"><i class="far fa-thumbs-up"></i>&nbsp; Vote</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="dark-moon" href="#"><i class="far fa-moon"></i></a>
+            </li>
+        </ul>
+    </div>
+    <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          class="dropdown-toggle navbar-text ml-auto" id="server-stats">
+        <b id="server-online"></b> <b>play.vortexcloud.tk</b> <span id="player-count"></span>
+    </span>
+    <div id="players" class="dropdown-menu" aria-labelledby="player-count"></div>
+</nav>
+<div id="page-content">
+    <div class="container">
+        <div class="row">
+            <div class="card col-md-2 mb-3" style="padding:0;">
+                <img class="card-img-top d-none d-md-block" src="https://minotar.net/armor/body/leoyy/256.png"
+                     alt="Card image"
+                     style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">leoyy</h4>
+                    <p class="card-text" style="color:lightskyblue;"><strong>Developer</strong></p>
+                    <p class="card-text" style="color:grey;">Head Dev of Skyblock</p>
+                    <p class="card-text" style="color:lightgray;">Thu 8 Aug</p>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <h4><strong>Island Levels Mechanism</strong></h4>
+                <p>This page will explain how the island levels works.</p>
+                <h4><strong>Calculation</strong></h4>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Value of one island level is 100</li>
+                    <li class="list-group-item">Due to various requests, there is no death penalty</li>
+                    <li class="list-group-item">Your island level is updated every time you join the server<br>You can
+                        manually
+                        update it with <code>/is levels</code></li>
+                    <li class="list-group-item"><strong>Limits</strong>
+                        <ul class="list-group list-group-flush" style="max-width: 300px;">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Cobblestone<span class="badge badge-success badge-pill">10000</span></li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Stone<span class="badge badge-success badge-pill">5000</span></li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Wool<span class="badge badge-success badge-pill">1000</span></li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Netherrack<span class="badge badge-success badge-pill">1000</span></li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Logs<span class="badge badge-success badge-pill">1000</span></li>
+                        </ul>
+                    </li>
+                </ul>
+                <br>
+                <h4><strong>Block Values</strong></h4>
+                <p>Many blocks in-game worth a certain value of points, the total island points is the sum of all the
+                    island's blocks's values.</p>
+                <p>Only blocks within the protection zone <span class="text-muted">(By default 100×100, increase by buying ranks)</span>
+                    will be counted!</p>
+                <div class="row" id="block-values">
+                    <ul class="col-md-6 list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Acacia Door<span
+                                class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Acacia Stairs<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Acacia Fence<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Acacia Fence Gate<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Acacia Stairs<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Activator Rail<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Air<span class="badge badge-success badge-pill">0</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Anvil<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Armor Stand<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Banner<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Beacon<span class="badge badge-success badge-pill">100</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Bed Block<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Bedrock<span class="badge badge-success badge-pill">0</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Beetroot Block<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Birch Door<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Birch Fence<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Birch Fence Gate<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Birch Wood Stairs<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Black Glazed Terracotta<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Black Shulker Box<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Blue Glazed Terracotta<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Blue Shulker Box<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Boat<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Boat Acacia<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Boat Birch<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Boat Dark Oak<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Boat Jungle<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Boat Spruce<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Bone Block<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Bookshelf<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Brewing Stand<span class="badge badge-success badge-pill">20</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Brick<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Brick Stairs<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Brown Glazed Terracotta<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Brown Shulker Box<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Burning Furnace<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Cactus<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Cake Block<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Carpet<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Cauldron<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Chest<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Chorus Flower<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Chorus Plant<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Clay<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Coal Block<span class="badge badge-success badge-pill">9</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Coal Ore<span class="badge badge-success badge-pill">0</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Cobble Wall<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Cobblestone<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Cobblestone Stairs<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Cocoa<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Concrete<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Concrete Powder<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Cyan Glazed Terracotta<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Cyan Shulker Box<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Dark Oak Door<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Dark Oak Fence<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Dark Oak Fence Gate<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Dark Oak Stairs<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Daylight Detector<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Daylight Detector Inverted<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Dead Bush<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Detector Rail<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Diamond Block<span class="badge badge-success badge-pill">300</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Diode<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Diode Block Off<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Diode Block On<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Dirt<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Dispenser<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Double Plant<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Double Step<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Double Stone Slab2<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Dragon Egg<span class="badge badge-success badge-pill">150</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Dropper<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Emerald Block<span class="badge badge-success badge-pill">150</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Emerald Ore<span class="badge badge-success badge-pill">0</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Enchantment Table<span class="badge badge-success badge-pill">150</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            End Bricks<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Ender Chest<span class="badge badge-success badge-pill">150</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Ender Portal Frame<span class="badge badge-success badge-pill">0</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Ender Portal<span class="badge badge-success badge-pill">0</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Ender Stone<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Explosive Minecart<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Fence<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Fence Gate<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Fire<span class="badge badge-success badge-pill">0</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Flower Pot<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Frosted Ice<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Furnace<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Glass<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Glowstone<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Gold Block<span class="badge badge-success badge-pill">150</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Gold Ore<span class="badge badge-success badge-pill">0</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Grass<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Grass Path<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Gray Glazed Terracotta<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Gray Shulker Box<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Gravel<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Green Glazed Terracotta<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Green Shulker Box<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Hard Clay<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Hay Block<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Hopper<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Hopper Minecart<span class="badge badge-success badge-pill">20</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Huge Mushroom 1<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Huge Mushroom 2<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Ice<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Iron Block<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Iron Door Block<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Iron Fence<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Iron Ore<span class="badge badge-success badge-pill">0</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Iron Plate<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Iron Trapdoor<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Item Frame<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Jack O Lantern<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Jukebox<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Jungle Door<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Jungle Fence<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Jungle Fence Gate<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Jungle Wood Stairs<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Ladder<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Lapis Block<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Lapis Ore<span class="badge badge-success badge-pill">0</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Lava<span class="badge badge-success badge-pill">0</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Leaves 2<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Leaves<span class="badge badge-success badge-pill">1</span></li>
+                    </ul>
+                    <ul class="col-md-6 list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Lever<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Light Blue Glazed Terracotta<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Light Blue Shulker Box<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Lime Glazed Terracotta<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Lime Shulker Box<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Log<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Long Grass<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Magenta Glazed Terracotta<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Magenta Shulker Box<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Magma<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Melon Block<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Melon Stem<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Minecart<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Mob Spawner<span class="badge badge-success badge-pill">0</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Mossy Cobblestone<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Mycel<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Nether Brick<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Nether Brick Stairs<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Nether Fence<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Nether Stalk<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Nether Wart Block<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Netherrack<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Note Block<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Observer<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Obsidian<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Orange Glazed Terracotta<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Orange Shulker Box<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Packed Ice<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Painting<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Pink Glazed Terracotta<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Pink Shulker Box<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Piston Base<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Piston Sticky Base<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Portal<span class="badge badge-success badge-pill">0</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Powered Minecart<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Powered Rail<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Prismarine<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Pumpkin Stem<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Pumpkin<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Purple Glazed Terracotta<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Purple Shulker Box<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Purpur Block<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Purpur Double Slab<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Purpur Pillar<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Purpur Slab<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Purpur Stairs<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Quartz Block<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Quartz Ore<span class="badge badge-success badge-pill">0</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Quartz Stairs<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Quartz<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Rails<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Red Glazed Terracotta<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Red Mushroom<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Red Nether Brick<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Red Rose<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Red Sandstone<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Red Sandstone Stairs<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Red Shulker Box<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Redstone Block<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Redstone Comparator Off<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Redstone Comparator On<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Redstone Comparator<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Redstone Lamp Off<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Redstone Lamp On<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Redstone Ore<span class="badge badge-success badge-pill">0</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Redstone Torch Off<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Redstone Torch On<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Redstone Wire<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Sand<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Sandstone<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Sandstone Stairs<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Sea Lantern<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Sign Post<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Silver Glazed Terracotta<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Silver Shulker Box<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Skull<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Slime Block<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Smooth Brick<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Smooth Stairs<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Snow Block<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Soil<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Soul Sand<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Sponge<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Spruce Door<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Spruce Fence<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Spruce Fence Gate<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Spruce Wood Stairs<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Stained Clay<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Stained Glass<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Stained Glass Pane<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Stationary Lava<span class="badge badge-success badge-pill">0</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Stationary Water<span class="badge badge-success badge-pill">0</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Step<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Stone<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Stone Button<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Stone Plate<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Storage Minecart<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Sugar Cane Block<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Thin Glass<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Tnt<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Torch<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Trap Door<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Trapped Chest<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Tripwire Hook<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Tripwire<span class="badge badge-success badge-pill">2</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Vine<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Wall Sign<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Water Lily<span class="badge badge-success badge-pill">5</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Web<span class="badge badge-success badge-pill">10</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Wheat<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            White Glazed Terracotta<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            White Shulker Box<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Wood<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Wood Button<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Wood Door<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Wood Double Step<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Wood Plate<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Wood Stairs<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Wood Step<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Wooden Door<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Wool<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Workbench<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Yellow Flower<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Yellow Glazed Terracotta<span class="badge badge-success badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Yellow Shulker Box<span class="badge badge-success badge-pill">1</span></li>
+                    </ul>
+                </div>
+                <br>
+                <p><strong>Congratulations!</strong> You finished looking through this long list of blocks. Hint,
+                    Diamond Blocks worth 300 points.</p>
+                <p>Good luck reaching #1 on the skyblock leaderboard!</p>
+                <p>P.S. It took me ages typing in all the block values...</p>
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
+    <span class="navbar-text" style="text-align: center; width:100%;">Vortex Team • Minecraft is a copyright of Mojang AB. All rights reserved.</span>
+</nav>
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
